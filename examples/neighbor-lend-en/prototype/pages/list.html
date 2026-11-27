@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/style.css"><title>Neighbor Lend · Item list</title>
+<style>.sr{margin:12px 16px;display:flex;gap:8px;align-items:center}.sr .input{flex:1}.it{display:flex;gap:12px;align-items:center}.ph{width:64px;height:64px;border-radius:8px;background:var(--color-primary-bg);display:flex;align-items:center;justify-content:center;font-size:28px;flex:none}.it h4{font-size:15px;margin-bottom:4px}.it p{font-size:12px;color:var(--color-text-tertiary);margin-bottom:4px}.bd{padding-bottom:70px}</style></head>
+<body><div class="phone-frame bd">
+<div class="nav-bar"><span class="nav-bar__title">Neighbor Lend</span><span class="nav-bar__action" id="loc">Sunny Garden ▾</span></div>
+<div class="sr"><input class="input" id="kw" placeholder="Search for what you need to borrow"><span class="nav-bar__action" id="btn-search" onclick="location.search='?s=empty'">Search</span></div>
+<div id="list">
+ <a href="detail.html" class="card it" id="item1"><div class="ph">🔧</div><div><h4>Bosch power drill (with 12 bits)</h4><p>Bldg 3, Ms. Wang · 200 m</p><span class="tag tag--success">Available</span></div></a>
+ <div class="card it"><div class="ph">⛺</div><div><h4>3-person tent</h4><p>Bldg 7, Mr. Chen · 450 m</p><span class="tag tag--orange">On loan · returns 11/05</span></div></div>
+ <div class="card it"><div class="ph">📽️</div><div><h4>Home projector</h4><p>Bldg 1, Lin · 120 m</p><span class="tag tag--success">Available</span></div></div>
+</div>
+<div id="empty" class="empty-state hidden"><div class="empty-state__icon">🔍</div><div class="empty-state__text">No "ladder" within 1 km<br>Try another keyword or widen the search range</div><div style="width:200px;margin-top:16px"><div class="btn btn--primary" id="btn-clear" onclick="location.search=''">Clear search</div></div></div>
+<div class="tab-bar"><div class="tab-bar__item active"><span>🏠</span>Discover</div><a class="tab-bar__item" href="mine.html"><span>📦</span>My loans</a></div>
+</div>
+<script>if(new URLSearchParams(location.search).get('s')==='empty'){document.getElementById('list').classList.add('hidden');document.getElementById('empty').classList.remove('hidden');document.getElementById('kw').value='ladder'}</script></body></html>

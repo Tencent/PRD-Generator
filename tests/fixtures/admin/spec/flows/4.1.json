@@ -1,0 +1,80 @@
+{
+ "scope": "4.1",
+ "title": "4.1 订单与售后：页面流转总览",
+ "nodes": [
+  {
+   "id": "start",
+   "kind": "start",
+   "label": "登录后台",
+   "col": 0,
+   "row": 0
+  },
+  {
+   "id": "orders",
+   "screen": "orders",
+   "col": 1,
+   "row": 0
+  },
+  {
+   "id": "empty",
+   "screen": "orders-empty",
+   "col": 1,
+   "row": 1
+  },
+  {
+   "id": "dlg",
+   "screen": "refund-dialog",
+   "col": 2,
+   "row": 1
+  },
+  {
+   "id": "detail",
+   "screen": "order-detail",
+   "col": 2,
+   "row": 0
+  },
+  {
+   "id": "log",
+   "screen": "order-log",
+   "col": 3,
+   "row": 0
+  }
+ ],
+ "edges": [
+  {
+   "f": "start",
+   "t": "orders",
+   "label": "进入订单管理",
+   "kind": "normal"
+  },
+  {
+   "f": "orders",
+   "t": "empty",
+   "label": "查无结果",
+   "kind": "boundary",
+   "fs": "b",
+   "ts": "t"
+  },
+  {
+   "f": "orders",
+   "t": "detail",
+   "label": "点“详情”",
+   "kind": "normal"
+  },
+  {
+   "f": "orders",
+   "t": "dlg",
+   "label": "点“退款”",
+   "kind": "popup",
+   "fs": "r",
+   "ts": "l",
+   "fo": 40
+  },
+  {
+   "f": "detail",
+   "t": "log",
+   "label": "切到操作记录",
+   "kind": "normal"
+  }
+ ]
+}

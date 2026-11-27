@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/style.css"><title>Neighbor Lend · Review</title>
+<style>.stars{font-size:32px;letter-spacing:6px;color:var(--color-warning);text-align:center;margin:12px 0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.tags span{padding:6px 12px;border:1px solid var(--color-border);border-radius:14px;font-size:13px;color:var(--color-text-secondary)}.tags .on{border-color:var(--color-primary);color:var(--color-primary);background:var(--color-primary-bg)}.done{text-align:center;padding:60px 24px}.done .big{font-size:56px}.done h3{margin:12px 0 6px}.done p{font-size:13px;color:var(--color-text-tertiary);margin-bottom:24px}</style></head>
+<body><div class="phone-frame">
+<div class="nav-bar"><a class="nav-bar__back" href="mine.html">‹ Back</a><span class="nav-bar__title">Review</span><span style="width:48px"></span></div>
+<div id="form"><div class="card"><div class="card__title">How was this loan?</div><p style="font-size:13px;color:var(--color-text-tertiary)">Bosch power drill · Ms. Wang</p>
+<div class="stars">★★★★★</div>
+<div class="tags"><span class="on">Item works great</span><span class="on">Pleasant communication</span><span>On-time handover</span><span>Item is worn</span></div>
+<input class="input" placeholder="Write something (optional)"></div>
+<div style="padding:0 16px"><div class="btn btn--primary" id="btn-review" onclick="location.search='?s=done'">Submit review</div></div></div>
+<div id="done" class="done hidden"><div class="big">🎉</div><h3>Loan complete, thanks for your review</h3><p>You have completed 6 loans in total; neighbor credit +2</p><div style="width:200px;margin:0 auto"><div class="btn btn--secondary" onclick="location.href='list.html'">Back to Discover</div></div></div>
+</div>
+<script>if(new URLSearchParams(location.search).get('s')==='done'){document.getElementById('form').classList.add('hidden');document.getElementById('done').classList.remove('hidden')}</script></body></html>

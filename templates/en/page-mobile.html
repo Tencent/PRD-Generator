@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>{Page name} - {Product name} prototype</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <!-- Skeleton: mobile page (375/390px). Copy it, replace every {…}, delete what you do not need.
+       Always use var(--color-…) for colours; switch states with ?s=xxx and open popups with data-open / ?open=#id so that `prdkit shot` can reach them. -->
+  <div class="phone-frame" style="padding-bottom:70px">
+    <div class="nav-bar">
+      <a class="nav-bar__back" href="javascript:history.back()">‹ Back</a>
+      <span class="nav-bar__title">{Page title}</span>
+      <span style="width:48px"></span>
+    </div>
+
+    <!-- Default state -->
+    <div data-state-not="empty">
+      <div class="card">
+        <div class="card__title">{Card title}</div>
+        <p class="text-secondary text-sm">{Realistic copy that fits the business}</p>
+      </div>
+      <div style="padding:0 16px"><div class="btn btn--primary" data-open="#dlg">{Primary action}</div></div>
+    </div>
+
+    <!-- Empty state (?s=empty) -->
+    <div class="empty-state" data-state="empty">
+      <div class="empty-state__icon">🔍</div>
+      <div class="empty-state__text">{Empty-state message}</div>
+    </div>
+
+    <!-- Popup -->
+    <div class="modal-overlay" id="dlg">
+      <div class="modal-content">
+        <div class="card__title">{Popup title}</div>
+        <p class="text-secondary text-sm" style="margin-bottom:16px">{Popup description}</p>
+        <div class="btn btn--primary" data-close data-toast="{Success toast}">{Confirm}</div>
+        <div class="btn btn--ghost" data-close>Cancel</div>
+      </div>
+    </div>
+
+    <div class="tab-bar">
+      <a class="tab-bar__item active" href="{home}.html"><span>🏠</span>Home</a>
+      <a class="tab-bar__item" href="{mine}.html"><span>👤</span>Me</a>
+    </div>
+  </div>
+  <script src="../assets/interaction.js"></script>
+</body>
+</html>

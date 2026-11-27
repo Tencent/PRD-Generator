@@ -1,0 +1,4 @@
+⚠️  [L-105] 第 442 行：残留占位符（TODO/TBD/待补充/{变量}）：{待填}
+
+PRD：<PROJ>/neighbor-lend-prd.md
+机器校验得分：98/100 —— 0 个错误，1 个提醒（语义类质检需 AI 另行判断，见 references/qa-semantic.md）

@@ -1,0 +1,91 @@
+{
+ "scope": "3.1",
+ "title": "3.1 Discover and request a loan: page flow overview",
+ "nodes": [
+  {
+   "id": "start",
+   "kind": "start",
+   "label": "Open the mini program",
+   "col": 0,
+   "row": 0
+  },
+  {
+   "id": "list",
+   "screen": "list",
+   "col": 1,
+   "row": 0
+  },
+  {
+   "id": "empty",
+   "screen": "list-empty",
+   "col": 1,
+   "row": 1
+  },
+  {
+   "id": "detail",
+   "screen": "detail",
+   "col": 2,
+   "row": 0
+  },
+  {
+   "id": "sheet",
+   "screen": "borrow-sheet",
+   "col": 3,
+   "row": 0
+  },
+  {
+   "id": "sent",
+   "screen": "borrow-sent",
+   "col": 3,
+   "row": 1
+  }
+ ],
+ "edges": [
+  {
+   "f": "start",
+   "t": "list",
+   "label": "Enter home",
+   "kind": "normal"
+  },
+  {
+   "f": "list",
+   "t": "empty",
+   "label": "No keyword match",
+   "kind": "boundary",
+   "fs": "b",
+   "ts": "t",
+   "fo": 0,
+   "to": 0
+  },
+  {
+   "f": "list",
+   "t": "detail",
+   "label": "Tap an item card",
+   "kind": "normal"
+  },
+  {
+   "f": "detail",
+   "t": "sheet",
+   "label": "Tap \"Request to borrow\"",
+   "kind": "popup"
+  },
+  {
+   "f": "sheet",
+   "t": "sent",
+   "label": "Send request",
+   "kind": "success",
+   "fs": "b",
+   "ts": "t"
+  },
+  {
+   "f": "empty",
+   "t": "list",
+   "label": "Clear search",
+   "kind": "back",
+   "fs": "t",
+   "ts": "b",
+   "fo": 40,
+   "to": 40
+  }
+ ]
+}

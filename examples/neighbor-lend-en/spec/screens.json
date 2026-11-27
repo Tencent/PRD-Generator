@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "lang": "en",
+  "name": "Neighbor Lend",
+  "version": "V1.0",
+  "demo": {
+    "mode": "local"
+  },
+  "platform": "miniprogram",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "dpr": 2
+  },
+  "chapters": [
+    {
+      "id": "3.1",
+      "title": "Discover and request a loan"
+    },
+    {
+      "id": "3.2",
+      "title": "Return and review"
+    }
+  ],
+  "screens": [
+    {
+      "id": "list",
+      "name": "Item list",
+      "kind": "page",
+      "chapter": "3.1",
+      "section": "3.1.3.1",
+      "url": "pages/list.html",
+      "shot": "list.png"
+    },
+    {
+      "id": "list-empty",
+      "name": "No search results",
+      "kind": "state",
+      "chapter": "3.1",
+      "section": "3.1.3.2",
+      "url": "pages/list.html?s=empty",
+      "shot": "list-empty.png"
+    },
+    {
+      "id": "detail",
+      "name": "Item detail",
+      "kind": "page",
+      "chapter": "3.1",
+      "section": "3.1.3.3",
+      "url": "pages/detail.html",
+      "shot": "detail.png"
+    },
+    {
+      "id": "borrow-sheet",
+      "name": "Request popup",
+      "kind": "popup",
+      "chapter": "3.1",
+      "section": "3.1.3.4",
+      "url": "pages/detail.html",
+      "actions": [
+        {
+          "click": "#btn-borrow"
+        },
+        {
+          "wait": 200
+        }
+      ],
+      "shot": "borrow-sheet.png",
+      "full_page": false
+    },
+    {
+      "id": "borrow-sent",
+      "name": "Request sent",
+      "kind": "state",
+      "chapter": "3.1",
+      "section": "3.1.3.5",
+      "url": "pages/detail.html?s=sent",
+      "shot": "borrow-sent.png",
+      "full_page": false
+    },
+    {
+      "id": "mine",
+      "name": "My loans",
+      "kind": "page",
+      "chapter": "3.2",
+      "section": "3.2.3.1",
+      "url": "pages/mine.html",
+      "shot": "mine.png"
+    },
+    {
+      "id": "return-confirm",
+      "name": "Confirm-return popup",
+      "kind": "popup",
+      "chapter": "3.2",
+      "section": "3.2.3.2",
+      "url": "pages/mine.html",
+      "actions": [
+        {
+          "click": "#btn-return"
+        },
+        {
+          "wait": 200
+        }
+      ],
+      "shot": "return-confirm.png",
+      "full_page": false
+    },
+    {
+      "id": "review",
+      "name": "Review page",
+      "kind": "page",
+      "chapter": "3.2",
+      "section": "3.2.3.3",
+      "url": "pages/review.html",
+      "shot": "review.png"
+    },
+    {
+      "id": "review-done",
+      "name": "Review done",
+      "kind": "state",
+      "chapter": "3.2",
+      "section": "3.2.3.4",
+      "url": "pages/review.html?s=done",
+      "shot": "review-done.png"
+    }
+  ],
+  "style": {
+    "name": "flat"
+  }
+}

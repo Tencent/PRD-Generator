@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/style.css"><title>示例首页</title></head>
+<body><div class="frame">
+<h1 id="ttl">示例首页</h1>
+<div class="card" id="state">默认状态</div>
+<button id="open" onclick="openSheet()">打开弹窗</button>
+<div class="mask" id="mask"><div class="sheet"><b>示例弹窗</b><p>这是一个虚构的底部弹窗。</p><button onclick="closeSheet()">知道了</button></div></div>
+</div>
+<script>
+function openSheet(){document.getElementById('mask').classList.add('on')}
+function closeSheet(){document.getElementById('mask').classList.remove('on')}
+var s=new URLSearchParams(location.search).get('s');
+if(s==='b'){document.getElementById('state').textContent='状态 B：已完成';document.getElementById('ttl').textContent='示例首页（B）'}
+</script></body></html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/style.css"><title>邻里借物 · 评价</title>
+<style>.stars{font-size:32px;letter-spacing:6px;color:var(--color-warning);text-align:center;margin:12px 0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.tags span{padding:6px 12px;border:1px solid var(--color-border);border-radius:14px;font-size:13px;color:var(--color-text-secondary)}.tags .on{border-color:var(--color-primary);color:var(--color-primary);background:var(--color-primary-bg)}.done{text-align:center;padding:60px 24px}.done .big{font-size:56px}.done h3{margin:12px 0 6px}.done p{font-size:13px;color:var(--color-text-tertiary);margin-bottom:24px}</style></head>
+<body><div class="phone-frame">
+<div class="nav-bar"><a class="nav-bar__back" href="mine.html">‹ 返回</a><span class="nav-bar__title">评价</span><span style="width:48px"></span></div>
+<div id="form"><div class="card"><div class="card__title">这次借用体验如何？</div><p style="font-size:13px;color:var(--color-text-tertiary)">博世电钻 · 王姐</p>
+<div class="stars">★★★★★</div>
+<div class="tags"><span class="on">物品很好用</span><span class="on">沟通愉快</span><span>准时交接</span><span>物品有损耗</span></div>
+<input class="input" placeholder="写点什么吧（选填）"></div>
+<div style="padding:0 16px"><div class="btn btn--primary" id="btn-review" onclick="location.search='?s=done'">提交评价</div></div></div>
+<div id="done" class="done hidden"><div class="big">🎉</div><h3>借用完成，谢谢你的评价</h3><p>你已累计完成 6 次借用，邻里信用分 +2</p><div style="width:200px;margin:0 auto"><div class="btn btn--secondary" onclick="location.href='list.html'">回到发现</div></div></div>
+</div>
+<script>if(new URLSearchParams(location.search).get('s')==='done'){document.getElementById('form').classList.add('hidden');document.getElementById('done').classList.remove('hidden')}</script></body></html>

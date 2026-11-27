@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>订单详情 - 云仓后台 原型</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="desktop-frame">
+    <aside class="sidebar">
+      <div class="sidebar__logo">云仓后台</div>
+      <div class="sidebar__group">交易</div>
+      <a class="sidebar__item" href="orders.html">订单管理</a>
+      <a class="sidebar__item active" href="order-detail.html">售后处理</a>
+      <div class="sidebar__group">系统</div>
+      <a class="sidebar__item" href="orders.html">角色权限</a>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb"><a href="orders.html">订单管理</a> / <b>订单详情</b></div>
+        <div class="text-secondary text-sm">运营-小周</div>
+      </header>
+
+      <div class="page-body">
+        <div class="page-title">订单 20261028003</div>
+
+        <div class="panel" data-tabs>
+          <div class="tabs">
+            <span class="tabs__item active" data-tab="info">基本信息</span>
+            <span class="tabs__item" data-tab="log">操作记录</span>
+          </div>
+
+          <div data-panel="info">
+            <div class="form-row"><div class="form-row__label">收货人</div><div>王芳　138****2210</div></div>
+            <div class="form-row"><div class="form-row__label">收货地址</div><div>上海市浦东新区张江路 88 号 3 栋 1201</div></div>
+            <div class="form-row"><div class="form-row__label">订单金额</div><div>¥239.00（含运费 ¥8.00）</div></div>
+            <div class="form-row"><div class="form-row__label">当前状态</div><div><span class="tag tag--primary">配送中</span></div></div>
+            <div class="form-row"><div class="form-row__label">备注</div><input class="input" placeholder="填写内部备注，仅运营可见"></div>
+            <div class="flex gap-md" style="margin-top:24px">
+              <div class="btn btn--primary btn--sm" data-toast="备注已保存">保存备注</div>
+              <a class="btn btn--secondary btn--sm" href="orders.html" data-flow-ignore>返回列表</a>
+            </div>
+          </div>
+
+          <div data-panel="log" class="hidden">
+            <table class="table">
+              <thead><tr><th>时间</th><th>操作人</th><th>动作</th></tr></thead>
+              <tbody>
+                <tr><td>2026-10-28 10:05</td><td>系统</td><td>订单创建</td></tr>
+                <tr><td>2026-10-28 10:12</td><td>运营-小周</td><td>确认发货</td></tr>
+                <tr><td>2026-10-28 14:30</td><td>配送员-老李</td><td>已揽收，配送中</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/interaction.js"></script>
+</body>
+</html>

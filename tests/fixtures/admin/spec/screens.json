@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "name": "云仓后台",
+  "version": "V0.1",
+  "platform": "admin",
+  "viewport": {"width": 1440, "height": 900, "dpr": 1},
+  "chapters": [{"id": "4.1", "title": "订单与售后"}],
+  "screens": [
+    {"id": "orders", "name": "订单列表", "kind": "page", "chapter": "4.1", "section": "4.1.3.1", "url": "pages/orders.html", "shot": "orders.png"},
+    {"id": "orders-empty", "name": "搜索无结果", "kind": "state", "chapter": "4.1", "section": "4.1.3.2", "url": "pages/orders.html?s=empty", "shot": "orders-empty.png"},
+    {"id": "refund-dialog", "name": "确认退款对话框", "kind": "popup", "chapter": "4.1", "section": "4.1.3.3", "url": "pages/orders.html?open=%23dlg", "shot": "refund-dialog.png", "full_page": false},
+    {"id": "order-detail", "name": "订单详情", "kind": "page", "chapter": "4.1", "section": "4.1.3.4", "url": "pages/order-detail.html", "shot": "order-detail.png"},
+    {"id": "order-log", "name": "订单操作记录", "kind": "state", "chapter": "4.1", "section": "4.1.3.5", "url": "pages/order-detail.html", "actions": [{"click": ".tabs__item[data-tab=\"log\"]"}, {"wait": 150}], "shot": "order-log.png"}
+  ]
+}

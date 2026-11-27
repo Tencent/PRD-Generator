@@ -1,0 +1,6 @@
+{"scope":"3.1","title":"3.1 示例章节：页面流转总览","thumb_w":140,"col_w":260,
+ "nodes":[{"id":"start","kind":"start","label":"打开示例","sub":"","col":0,"row":0},
+  {"id":"a","screen":"home-a","col":1,"row":0},{"id":"b","screen":"home-b","col":2,"row":0},
+  {"id":"sh","screen":"home-sheet","col":1,"row":1},{"id":"ev","screen":"home-eval","col":2,"row":1}],
+ "edges":[{"f":"start","t":"a","label":"进入","kind":"normal"},{"f":"a","t":"b","label":"完成","kind":"success"},
+  {"f":"a","t":"sh","label":"点打开弹窗","kind":"popup","fs":"b","ts":"t"},{"f":"b","t":"ev","label":"再次打开","kind":"popup","fs":"b","ts":"t"}]}

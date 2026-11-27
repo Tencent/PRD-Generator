@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "name": "邻里借物",
+  "version": "V1.0",
+  "demo": {
+    "mode": "local"
+  },
+  "platform": "miniprogram",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "dpr": 2
+  },
+  "chapters": [
+    {
+      "id": "3.1",
+      "title": "发现与申请借用"
+    },
+    {
+      "id": "3.2",
+      "title": "归还与评价"
+    }
+  ],
+  "screens": [
+    {
+      "id": "list",
+      "name": "物品列表",
+      "kind": "page",
+      "chapter": "3.1",
+      "section": "3.1.3.1",
+      "url": "pages/list.html",
+      "shot": "list.png"
+    },
+    {
+      "id": "list-empty",
+      "name": "搜索无结果",
+      "kind": "state",
+      "chapter": "3.1",
+      "section": "3.1.3.2",
+      "url": "pages/list.html?s=empty",
+      "shot": "list-empty.png"
+    },
+    {
+      "id": "detail",
+      "name": "物品详情",
+      "kind": "page",
+      "chapter": "3.1",
+      "section": "3.1.3.3",
+      "url": "pages/detail.html",
+      "shot": "detail.png"
+    },
+    {
+      "id": "borrow-sheet",
+      "name": "申请借用弹窗",
+      "kind": "popup",
+      "chapter": "3.1",
+      "section": "3.1.3.4",
+      "url": "pages/detail.html",
+      "actions": [
+        {
+          "click": "#btn-borrow"
+        },
+        {
+          "wait": 200
+        }
+      ],
+      "shot": "borrow-sheet.png",
+      "full_page": false
+    },
+    {
+      "id": "borrow-sent",
+      "name": "申请已发送",
+      "kind": "state",
+      "chapter": "3.1",
+      "section": "3.1.3.5",
+      "url": "pages/detail.html?s=sent",
+      "shot": "borrow-sent.png",
+      "full_page": false
+    },
+    {
+      "id": "mine",
+      "name": "我的借用",
+      "kind": "page",
+      "chapter": "3.2",
+      "section": "3.2.3.1",
+      "url": "pages/mine.html",
+      "shot": "mine.png"
+    },
+    {
+      "id": "return-confirm",
+      "name": "确认归还弹窗",
+      "kind": "popup",
+      "chapter": "3.2",
+      "section": "3.2.3.2",
+      "url": "pages/mine.html",
+      "actions": [
+        {
+          "click": "#btn-return"
+        },
+        {
+          "wait": 200
+        }
+      ],
+      "shot": "return-confirm.png",
+      "full_page": false
+    },
+    {
+      "id": "review",
+      "name": "评价页",
+      "kind": "page",
+      "chapter": "3.2",
+      "section": "3.2.3.3",
+      "url": "pages/review.html",
+      "shot": "review.png"
+    },
+    {
+      "id": "review-done",
+      "name": "评价完成",
+      "kind": "state",
+      "chapter": "3.2",
+      "section": "3.2.3.4",
+      "url": "pages/review.html?s=done",
+      "shot": "review-done.png"
+    }
+  ],
+  "style": {
+    "name": "flat"
+  }
+}

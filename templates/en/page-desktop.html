@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{Page name} - {Product name} prototype</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <!-- Skeleton: desktop / admin page (1440px). Sidebar + top bar + content area.
+       Always use var(--color-…) for colours; switch states with ?s=xxx and open popups with data-open / ?open=#id so that `prdkit shot` can reach them. -->
+  <div class="desktop-frame">
+    <aside class="sidebar">
+      <div class="sidebar__logo">{Product name}</div>
+      <div class="sidebar__group">{Group name}</div>
+      <a class="sidebar__item active" href="{pageA}.html">{Menu A}</a>
+      <a class="sidebar__item" href="{pageB}.html">{Menu B}</a>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">{Level-1 menu} / <b>{Current page}</b></div>
+        <div class="text-secondary text-sm">{Admin nickname}</div>
+      </header>
+
+      <div class="page-body">
+        <div class="page-title">{Page title}</div>
+
+        <div class="panel">
+          <div class="filter-bar">
+            <input class="input" placeholder="{Search hint}">
+            <span class="select">{Filter} <span>▾</span></span>
+            <div class="btn btn--primary btn--sm">Search</div>
+            <div class="btn btn--secondary btn--sm">Reset</div>
+          </div>
+
+          <table class="table" data-state-not="empty">
+            <thead><tr><th>{Column 1}</th><th>{Column 2}</th><th class="num">{Numeric column}</th><th>Actions</th></tr></thead>
+            <tbody>
+              <tr><td>{Real data}</td><td><span class="tag tag--success">{Status}</span></td><td class="num">{Number}</td>
+                  <td><span class="btn btn--link" data-open="#dlg">{Action}</span></td></tr>
+            </tbody>
+          </table>
+          <div class="table-empty" data-state="empty">{Empty-state message}</div>
+
+          <div class="pagination" data-state-not="empty">
+            <span>{N} items</span><span class="pagination__item">‹</span><span class="pagination__item active">1</span><span class="pagination__item">2</span><span class="pagination__item">›</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay center" id="dlg">
+      <div class="dialog">
+        <div class="dialog__title">{Dialog title}</div>
+        <div class="dialog__body">{Description; state the scope of impact}</div>
+        <div class="dialog__footer">
+          <div class="btn btn--secondary btn--sm" data-close>Cancel</div>
+          <div class="btn btn--primary btn--sm" data-close data-toast="{Success toast}">Confirm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/interaction.js"></script>
+</body>
+</html>

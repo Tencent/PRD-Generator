@@ -1,0 +1,2 @@
+ℹ️  缺少中文字体，需要系统管理权限，无法自动处理。
+   安装中文字体后重试：Debian/Ubuntu 用 `apt install fonts-noto-cjk`；CentOS/TencentOS 用 `yum install google-noto-sans-cjk-ttc-fonts`；macOS 和 Windows 自带，无需安装

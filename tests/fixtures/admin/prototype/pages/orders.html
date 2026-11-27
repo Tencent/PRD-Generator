@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>订单管理 - 云仓后台 原型</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="desktop-frame">
+    <aside class="sidebar">
+      <div class="sidebar__logo">云仓后台</div>
+      <div class="sidebar__group">交易</div>
+      <a class="sidebar__item active" href="orders.html">订单管理</a>
+      <a class="sidebar__item" href="order-detail.html">售后处理</a>
+      <div class="sidebar__group">系统</div>
+      <a class="sidebar__item" href="orders.html">角色权限</a>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="breadcrumb">交易 / <b>订单管理</b></div>
+        <div class="text-secondary text-sm">运营-小周</div>
+      </header>
+
+      <div class="page-body">
+        <div class="page-title">订单管理</div>
+
+        <div class="stat-grid" data-state-not="empty">
+          <div class="stat"><div class="stat__label">今日订单</div><div class="stat__value">1,286</div><div class="stat__delta">较昨日 +12.4%</div></div>
+          <div class="stat"><div class="stat__label">待发货</div><div class="stat__value">37</div><div class="stat__delta down">较昨日 -3</div></div>
+          <div class="stat"><div class="stat__label">成交额</div><div class="stat__value">¥82.6万</div><div class="stat__delta">较昨日 +5.1%</div></div>
+          <div class="stat"><div class="stat__label">退款率</div><div class="stat__value">1.8%</div><div class="stat__delta down">较昨日 +0.2%</div></div>
+        </div>
+
+        <div class="panel">
+          <div class="filter-bar">
+            <input class="input" placeholder="订单号 / 收货人手机号">
+            <span class="select">全部状态 <span>▾</span></span>
+            <div class="btn btn--primary btn--sm">查询</div>
+            <div class="btn btn--secondary btn--sm">重置</div>
+          </div>
+
+          <table class="table" data-state-not="empty">
+            <thead><tr><th>订单号</th><th>收货人</th><th>状态</th><th class="num">金额</th><th>下单时间</th><th>操作</th></tr></thead>
+            <tbody>
+              <tr><td>20261028001</td><td>陈慧</td><td><span class="tag tag--success">已完成</span></td><td class="num">¥128.00</td><td>2026-10-28 09:12</td><td><a class="btn btn--link" href="order-detail.html">详情</a></td></tr>
+              <tr><td>20261028002</td><td>刘强</td><td><span class="tag tag--orange">待发货</span></td><td class="num">¥56.50</td><td>2026-10-28 09:40</td><td><a class="btn btn--link" href="order-detail.html">详情</a></td></tr>
+              <tr><td>20261028003</td><td>王芳</td><td><span class="tag tag--primary">配送中</span></td><td class="num">¥239.00</td><td>2026-10-28 10:05</td><td><a class="btn btn--link" href="order-detail.html">详情</a> <span class="btn btn--link text-error" data-open="#dlg">退款</span></td></tr>
+              <tr><td>20261028004</td><td>赵磊</td><td><span class="tag tag--red">已退款</span></td><td class="num">¥76.00</td><td>2026-10-28 10:31</td><td><a class="btn btn--link" href="order-detail.html">详情</a></td></tr>
+            </tbody>
+          </table>
+          <div class="table-empty" data-state="empty">没有找到匹配“19990101”的订单，请检查订单号或换个条件</div>
+
+          <div class="pagination" data-state-not="empty">
+            <span>共 128 条</span><span class="pagination__item">‹</span><span class="pagination__item active">1</span><span class="pagination__item">2</span><span class="pagination__item">3</span><span class="pagination__item">›</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay center" id="dlg">
+      <div class="dialog">
+        <div class="dialog__title">确认退款</div>
+        <div class="dialog__body">将向王芳原路退回 ¥239.00，订单状态变为“已退款”，操作不可撤销。</div>
+        <div class="dialog__footer">
+          <div class="btn btn--secondary btn--sm" data-close>取消</div>
+          <div class="btn btn--danger btn--sm" data-close data-toast="退款已提交">确认退款</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/interaction.js"></script>
+</body>
+</html>

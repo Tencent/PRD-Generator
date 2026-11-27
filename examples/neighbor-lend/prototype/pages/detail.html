@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/style.css"><title>邻里借物 · 物品详情</title>
+<style>.hero{height:180px;background:var(--color-primary-bg);display:flex;align-items:center;justify-content:center;font-size:72px}.row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--color-border-light);font-size:14px}.row>span:first-child{color:var(--color-text-tertiary)}.bot{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:375px;padding:10px 16px;background:var(--color-bg-base);border-top:1px solid var(--color-border-light)}.bd{padding-bottom:80px}.sheet-row{margin-bottom:14px}.sheet-row label{display:block;font-size:13px;color:var(--color-text-secondary);margin-bottom:6px}.seg{display:flex;gap:8px}.seg span{flex:1;text-align:center;padding:10px 0;border:1px solid var(--color-border);border-radius:8px;font-size:14px}.seg .on{border-color:var(--color-primary);color:var(--color-primary);background:var(--color-primary-bg)}</style></head>
+<body><div class="phone-frame bd">
+<div class="nav-bar"><a class="nav-bar__back" href="list.html">‹ 返回</a><span class="nav-bar__title">物品详情</span><span style="width:48px"></span></div>
+<div class="hero">🔧</div>
+<div class="card"><div class="card__title">博世电钻（含 12 支钻头）</div>
+ <div class="row"><span>出借人</span><span>3 栋 王姐（已实名）</span></div>
+ <div class="row"><span>距离</span><span>200 米</span></div>
+ <div class="row"><span>最长借期</span><span>7 天</span></div>
+ <div class="row"><span>押金</span><span>无需押金</span></div>
+ <div class="row"><span>状态</span><span id="st"><span class="tag tag--success">可借</span></span></div>
+ <p style="margin-top:12px;font-size:13px;color:var(--color-text-secondary)">周末装书架用过两次，状态很好。请当面交接，用完擦干净再还。</p></div>
+<div class="bot"><div class="btn btn--primary" id="btn-borrow" onclick="openSheet()">申请借用</div></div>
+<div class="modal-overlay" id="mask"><div class="modal-content">
+ <div class="card__title">申请借用</div>
+ <div class="sheet-row"><label>借用时长</label><div class="seg"><span>1 天</span><span class="on">3 天</span><span>7 天</span></div></div>
+ <div class="sheet-row"><label>给王姐留言（选填）</label><input class="input" placeholder="例如：周六上午装书架，周日傍晚归还"></div>
+ <div class="btn btn--primary" id="btn-submit" onclick="submitReq()">发送申请</div>
+ <div class="btn btn--ghost" onclick="closeSheet()">取消</div></div></div>
+<div class="toast" id="toast">申请已发送，等待王姐确认</div>
+</div>
+<script>
+function openSheet(){document.getElementById('mask').classList.add('active')}
+function closeSheet(){document.getElementById('mask').classList.remove('active')}
+function sent(){var b=document.getElementById('btn-borrow');b.textContent='等待出借人确认';b.className='btn btn--secondary btn--disabled';document.getElementById('st').innerHTML='<span class="tag tag--orange">申请中</span>';document.getElementById('toast').classList.add('show')}
+function submitReq(){closeSheet();sent()}
+if(new URLSearchParams(location.search).get('s')==='sent')sent();
+</script></body></html>

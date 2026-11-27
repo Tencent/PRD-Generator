@@ -1,0 +1,27 @@
+/* 风格：扁平 flat —— 纯色块、无阴影、小圆角，利落清爽（默认风格）
+ * 叠加在 prototype-style.css 之后，只改表面（颜色/阴影/圆角/边框/背景），不改布局。 */
+:root {
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --color-bg-layout: #F5F6F8;
+}
+/* 页面底用浅灰，让白色卡片在无阴影时依然分得出层次 */
+.phone-frame { background-color: var(--color-bg-layout); }
+.nav-bar { border-bottom: 1px solid var(--color-border-light); }
+.card { box-shadow: none; }
+.btn--primary { background: var(--color-primary); }
+.btn--orange { background: var(--color-orange); }
+.btn--secondary { background: var(--color-bg-base); border: 1px solid var(--color-border); }
+.fab { box-shadow: none; background: var(--color-primary); }
+.modal-content { box-shadow: none; }
+.tab-bar { border-top: 1px solid var(--color-border-light); }
+/* PC / 后台 */
+.desktop-frame { background-color: var(--color-bg-layout); }
+.topbar, .sidebar { border-color: var(--color-border-light); }
+.panel, .stat { box-shadow: none; border: 1px solid var(--color-border-light); }
+.dialog { box-shadow: none; border: 1px solid var(--color-border); }
+.btn--primary.btn--sm, .btn--primary.btn--xs { background: var(--color-primary); }

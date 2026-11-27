@@ -1,0 +1,15 @@
+PRD Generator
+Copyright (C) 2026 Tencent.  All rights reserved.
+
+Tencent is pleased to support the open source community by making PRD Generator available.
+
+This product is licensed under the MIT. See the LICENSE file for details.
+
+This repository does not include or redistribute third-party source code, fonts or images.
+
+At runtime, PRD Generator uses the following software, which is installed separately by the user
+(it is not part of this repository and is not redistributed by it):
+
+  - Playwright for Python (https://github.com/microsoft/playwright-python), licensed under the Apache License Version 2.0.
+  - A web browser driven by Playwright (Google Chrome, Microsoft Edge, or the Chromium build downloaded by
+    "python3 -m playwright install chromium"), each under its own license.

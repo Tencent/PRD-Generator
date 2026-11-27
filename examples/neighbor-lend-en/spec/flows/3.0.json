@@ -1,0 +1,101 @@
+{
+ "scope": "3.0",
+ "title": "Neighbor Lend: overall page flow",
+ "lanes": [
+  {
+   "label": "Borrow",
+   "row0": 0,
+   "row1": 0
+  },
+  {
+   "label": "Return and review",
+   "row0": 1,
+   "row1": 1
+  }
+ ],
+ "nodes": [
+  {
+   "id": "start",
+   "kind": "start",
+   "label": "Open the mini program",
+   "col": 0,
+   "row": 0
+  },
+  {
+   "id": "list",
+   "screen": "list",
+   "col": 1,
+   "row": 0
+  },
+  {
+   "id": "detail",
+   "screen": "detail",
+   "col": 2,
+   "row": 0
+  },
+  {
+   "id": "sheet",
+   "screen": "borrow-sheet",
+   "col": 3,
+   "row": 0
+  },
+  {
+   "id": "mine",
+   "screen": "mine",
+   "col": 1,
+   "row": 1
+  },
+  {
+   "id": "confirm",
+   "screen": "return-confirm",
+   "col": 2,
+   "row": 1
+  },
+  {
+   "id": "review",
+   "screen": "review",
+   "col": 3,
+   "row": 1
+  }
+ ],
+ "edges": [
+  {
+   "f": "start",
+   "t": "list",
+   "label": "Enter home",
+   "kind": "normal"
+  },
+  {
+   "f": "list",
+   "t": "detail",
+   "label": "Tap an item card",
+   "kind": "normal"
+  },
+  {
+   "f": "detail",
+   "t": "sheet",
+   "label": "Tap \"Request to borrow\"",
+   "kind": "popup"
+  },
+  {
+   "f": "list",
+   "t": "mine",
+   "label": "Bottom tab \"My loans\"",
+   "kind": "normal",
+   "fs": "b",
+   "ts": "t"
+  },
+  {
+   "f": "mine",
+   "t": "confirm",
+   "label": "Tap \"I returned it\"",
+   "kind": "popup"
+  },
+  {
+   "f": "confirm",
+   "t": "review",
+   "label": "Confirm return",
+   "kind": "success"
+  }
+ ]
+}

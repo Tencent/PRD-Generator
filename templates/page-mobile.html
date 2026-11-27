@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>{页面名称} - {产品名称} 原型</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <!-- 骨架：移动端页面（375/390px）。复制后替换 {…}，删掉用不到的部分。
+       颜色一律用 var(--color-…)；状态用 ?s=xxx 切换，弹窗用 data-open / ?open=#id 触发，保证 prdkit shot 能到达。 -->
+  <div class="phone-frame" style="padding-bottom:70px">
+    <div class="nav-bar">
+      <a class="nav-bar__back" href="javascript:history.back()">‹ 返回</a>
+      <span class="nav-bar__title">{页面标题}</span>
+      <span style="width:48px"></span>
+    </div>
+
+    <!-- 默认状态 -->
+    <div data-state-not="empty">
+      <div class="card">
+        <div class="card__title">{卡片标题}</div>
+        <p class="text-secondary text-sm">{真实、贴合业务的说明文案}</p>
+      </div>
+      <div style="padding:0 16px"><div class="btn btn--primary" data-open="#dlg">{主操作}</div></div>
+    </div>
+
+    <!-- 空态（?s=empty） -->
+    <div class="empty-state" data-state="empty">
+      <div class="empty-state__icon">🔍</div>
+      <div class="empty-state__text">{空态说明}</div>
+    </div>
+
+    <!-- 弹窗 -->
+    <div class="modal-overlay" id="dlg">
+      <div class="modal-content">
+        <div class="card__title">{弹窗标题}</div>
+        <p class="text-secondary text-sm" style="margin-bottom:16px">{弹窗说明}</p>
+        <div class="btn btn--primary" data-close data-toast="{操作成功提示}">{确认}</div>
+        <div class="btn btn--ghost" data-close>取消</div>
+      </div>
+    </div>
+
+    <div class="tab-bar">
+      <a class="tab-bar__item active" href="{首页}.html"><span>🏠</span>首页</a>
+      <a class="tab-bar__item" href="{我的}.html"><span>👤</span>我的</a>
+    </div>
+  </div>
+  <script src="../assets/interaction.js"></script>
+</body>
+</html>

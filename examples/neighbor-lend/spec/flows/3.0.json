@@ -1,0 +1,25 @@
+{
+  "scope": "3.0",
+  "title": "邻里借物：整体页面流程图",
+  "lanes": [
+    {"label": "借用", "row0": 0, "row1": 0},
+    {"label": "归还与评价", "row0": 1, "row1": 1}
+  ],
+  "nodes": [
+    {"id": "start", "kind": "start", "label": "打开小程序", "col": 0, "row": 0},
+    {"id": "list", "screen": "list", "col": 1, "row": 0},
+    {"id": "detail", "screen": "detail", "col": 2, "row": 0},
+    {"id": "sheet", "screen": "borrow-sheet", "col": 3, "row": 0},
+    {"id": "mine", "screen": "mine", "col": 1, "row": 1},
+    {"id": "confirm", "screen": "return-confirm", "col": 2, "row": 1},
+    {"id": "review", "screen": "review", "col": 3, "row": 1}
+  ],
+  "edges": [
+    {"f": "start", "t": "list", "label": "进入首页", "kind": "normal"},
+    {"f": "list", "t": "detail", "label": "点击物品卡片", "kind": "normal"},
+    {"f": "detail", "t": "sheet", "label": "点“申请借用”", "kind": "popup"},
+    {"f": "list", "t": "mine", "label": "底部 Tab “我的借用”", "kind": "normal", "fs": "b", "ts": "t"},
+    {"f": "mine", "t": "confirm", "label": "点“我已归还”", "kind": "popup"},
+    {"f": "confirm", "t": "review", "label": "确认已归还", "kind": "success"}
+  ]
+}

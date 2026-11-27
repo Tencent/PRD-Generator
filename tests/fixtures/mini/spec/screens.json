@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "name": "迷你示例",
+  "version": "V0.1",
+  "platform": "miniprogram",
+  "viewport": {"width": 390, "height": 844, "dpr": 2},
+  "chapters": [{"id": "3.1", "title": "示例章节"}],
+  "screens": [
+    {"id": "home-a", "name": "首页 A 态", "kind": "page", "chapter": "3.1", "section": "3.1.3.1", "url": "pages/home.html", "shot": "home-a.png"},
+    {"id": "home-b", "name": "首页 B 态", "kind": "state", "chapter": "3.1", "section": "3.1.3.2", "url": "pages/home.html?s=b", "shot": "home-b.png"},
+    {"id": "home-sheet", "name": "示例弹窗", "kind": "popup", "chapter": "3.1", "section": "3.1.3.3", "url": "pages/home.html", "actions": [{"click": "#open"}], "shot": "home-sheet.png", "full_page": false},
+    {"id": "home-eval", "name": "eval 触发弹窗", "kind": "popup", "chapter": "3.1", "url": "pages/home.html?s=b", "actions": [{"eval": "openSheet()"}, {"wait": 200}], "shot": "home-eval.png", "full_page": false}
+  ]
+}

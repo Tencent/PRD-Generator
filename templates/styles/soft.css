@@ -1,0 +1,39 @@
+/* 风格：柔和圆润 soft —— 大圆角、浅色渐变底、柔和彩色阴影（国内 C 端最常见）
+ * 叠加在 prototype-style.css 之后，只改表面，不改布局。 */
+:root {
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 6px 18px rgba(var(--color-primary-rgb), 0.09);
+  --shadow-md: 0 8px 24px rgba(var(--color-primary-rgb), 0.12);
+  --shadow-lg: 0 12px 32px rgba(var(--color-primary-rgb), 0.16);
+  --color-bg-layout: #F6F8FC;
+}
+body { background: linear-gradient(180deg, rgba(var(--color-primary-rgb), 0.14) 0, #F6F8FC 260px) #F6F8FC; background-attachment: fixed; }
+.phone-frame { background: transparent; }
+.nav-bar { background: transparent; border-bottom: none; }
+.card { box-shadow: var(--shadow-sm); }
+.input { background: var(--color-bg-base); border: none; border-radius: 22px; box-shadow: 0 4px 14px rgba(var(--color-primary-rgb), 0.10); }
+.btn { border-radius: 26px; }
+.btn--primary { background: var(--color-primary); box-shadow: 0 10px 20px rgba(var(--color-primary-rgb), 0.28); }
+.btn--orange { background: var(--color-orange); box-shadow: 0 10px 20px rgba(250, 140, 22, 0.28); }
+.btn--secondary { background: var(--color-bg-base); box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.10); }
+.tag { border-radius: 12px; }
+.modal-content { border-radius: 26px 26px 0 0; box-shadow: 0 -10px 30px rgba(var(--color-primary-rgb), 0.16); }
+.tab-bar { border-top: none; border-radius: 22px 22px 0 0; box-shadow: 0 -6px 20px rgba(var(--color-primary-rgb), 0.10); }
+.fab { background: var(--color-primary); }
+/* PC / 后台 */
+.desktop-frame { background: transparent; }
+.sidebar { background: var(--color-bg-base); border-right: none; box-shadow: 6px 0 24px rgba(var(--color-primary-rgb), 0.07); }
+.topbar { background: transparent; border-bottom: none; }
+.sidebar__item { border-radius: 14px; }
+.panel, .stat { box-shadow: var(--shadow-sm); }
+.dialog { box-shadow: var(--shadow-lg); border-radius: 24px; }
+.select { border: none; box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.10); border-radius: 18px; }
+.pagination__item { border: none; border-radius: 16px; box-shadow: 0 3px 10px rgba(var(--color-primary-rgb), 0.10); }
+.pagination__item.active { background: var(--color-primary); color: var(--color-text-white); box-shadow: 0 6px 14px rgba(var(--color-primary-rgb), 0.3); }
+.btn--sm, .btn--xs { border-radius: 20px; }
+.btn--sm.btn--primary { box-shadow: 0 8px 16px rgba(var(--color-primary-rgb), 0.26); }
+.table th { background: rgba(var(--color-primary-rgb), 0.06); }
+.table th:first-child { border-radius: 14px 0 0 14px; }
+.table th:last-child { border-radius: 0 14px 14px 0; }

@@ -1,0 +1,84 @@
+/* 风格：毛玻璃 glass —— 半透明加模糊、渐变背景、大圆角、内高光
+ * 叠加在 prototype-style.css 之后，只改表面，不改布局。 */
+:root {
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 6px 18px rgba(var(--color-primary-rgb), 0.10);
+  --shadow-md: 0 8px 24px rgba(var(--color-primary-rgb), 0.14);
+  --shadow-lg: 0 12px 32px rgba(var(--color-primary-rgb), 0.18);
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.85);
+}
+body {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(var(--color-primary-rgb), 0.26), transparent 44%),
+    radial-gradient(circle at 96% 62%, rgba(var(--color-primary-rgb), 0.10), transparent 46%),
+    linear-gradient(165deg, var(--color-primary-bg) 0%, #F6F7FB 55%, #FFFFFF 100%);
+  background-attachment: fixed;
+}
+.phone-frame { background: transparent; }
+.nav-bar {
+  background: rgba(255, 255, 255, 0.45);
+  border-bottom: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  backdrop-filter: blur(20px) saturate(1.5);
+}
+.card, .modal-content, .toast {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  backdrop-filter: blur(20px) saturate(1.5);
+  box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+.toast { color: var(--color-text-primary); }
+.modal-content { background: rgba(255, 255, 255, 0.72); border-radius: 26px 26px 0 0; }
+.input {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+}
+.btn { border-radius: 24px; }
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-dark));
+  box-shadow: 0 10px 22px rgba(var(--color-primary-rgb), 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.btn--orange { box-shadow: 0 10px 22px rgba(250, 140, 22, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+.btn--secondary {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--glass-border);
+}
+.tag { border-radius: 10px; }
+.tab-bar {
+  background: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  backdrop-filter: blur(24px) saturate(1.6);
+}
+/* PC / 后台 */
+.desktop-frame { background: transparent; }
+.sidebar {
+  background: rgba(255, 255, 255, 0.5);
+  border-right: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  backdrop-filter: blur(24px) saturate(1.6);
+}
+.topbar {
+  background: rgba(255, 255, 255, 0.45);
+  border-bottom: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  backdrop-filter: blur(20px) saturate(1.5);
+}
+.sidebar__item.active { background: rgba(255, 255, 255, 0.85); box-shadow: var(--shadow-sm); }
+.panel, .stat, .dialog {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  backdrop-filter: blur(20px) saturate(1.5);
+  box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+.dialog { background: rgba(255, 255, 255, 0.78); }
+.table th { background: rgba(255, 255, 255, 0.5); }
+.select, .pagination__item { background: rgba(255, 255, 255, 0.6); border-color: var(--glass-border); border-radius: 14px; }
+.btn--sm, .btn--xs { border-radius: 18px; }
+.tabs__item.active { border-bottom-width: 3px; }

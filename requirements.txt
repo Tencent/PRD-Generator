@@ -1,0 +1,4 @@
+# PRD Generator 运行依赖（核心流程只需要 Playwright，用于页面截图与流程图渲染）
+# 浏览器：优先使用电脑上已有的 Chrome / Edge；没有时运行 `python3 scripts/prdkit.py setup --yes`
+# 下载内置 Chromium。GitHub Pages 发布器只用标准库，不需要额外依赖。
+playwright>=1.40

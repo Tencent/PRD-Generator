@@ -1,0 +1,4 @@
+❌ [L-501] 第 441 行：PRD 中出现本机地址（localhost/127.0.0.1），发布后他人无法打开：预览：http://localhost:8888/x
+
+PRD：<PROJ>/neighbor-lend-prd.md
+机器校验得分：95/100 —— 1 个错误，0 个提醒（语义类质检需 AI 另行判断，见 references/qa-semantic.md）

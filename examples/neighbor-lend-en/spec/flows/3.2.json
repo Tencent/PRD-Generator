@@ -1,0 +1,83 @@
+{
+ "scope": "3.2",
+ "title": "3.2 Return and review: page flow overview",
+ "nodes": [
+  {
+   "id": "start",
+   "kind": "start",
+   "label": "Enter \"My loans\"",
+   "col": 0,
+   "row": 0
+  },
+  {
+   "id": "mine",
+   "screen": "mine",
+   "col": 1,
+   "row": 0
+  },
+  {
+   "id": "confirm",
+   "screen": "return-confirm",
+   "col": 2,
+   "row": 0
+  },
+  {
+   "id": "review",
+   "screen": "review",
+   "col": 3,
+   "row": 0
+  },
+  {
+   "id": "done",
+   "screen": "review-done",
+   "col": 3,
+   "row": 1
+  },
+  {
+   "id": "list",
+   "screen": "list",
+   "col": 1,
+   "row": 1
+  }
+ ],
+ "edges": [
+  {
+   "f": "start",
+   "t": "mine",
+   "label": "Tap bottom tab",
+   "kind": "normal"
+  },
+  {
+   "f": "mine",
+   "t": "confirm",
+   "label": "Tap \"I returned it\"",
+   "kind": "popup"
+  },
+  {
+   "f": "confirm",
+   "t": "review",
+   "label": "Confirm return",
+   "kind": "success"
+  },
+  {
+   "f": "mine",
+   "t": "review",
+   "label": "Tap \"Write a review\"",
+   "kind": "normal"
+  },
+  {
+   "f": "review",
+   "t": "done",
+   "label": "Submit review",
+   "kind": "success",
+   "fs": "b",
+   "ts": "t"
+  },
+  {
+   "f": "done",
+   "t": "list",
+   "label": "Back to Discover",
+   "kind": "back"
+  }
+ ]
+}

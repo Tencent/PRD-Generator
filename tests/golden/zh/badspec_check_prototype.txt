@@ -1,0 +1,10 @@
+══ 闸门「prototype」原型（给用户评审之前） ══
+
+【需要你判断后修改】
+  ⚠️  [SPEC-003] platform 应为 ['admin', 'app', 'h5', 'miniprogram', 'web'] 之一，当前：'tv'
+  ❌ [SPEC-016] screens[0](list): 原型文件不存在 prototype/pages/not-exist.html
+  ❌ [SPEC-011] screens[9](list-empty): id 重复
+
+共 2 个错误、1 个提醒。
+➡ 请先修复错误，再重新运行同一条命令；错误清零后才能交给用户。
+

@@ -1,0 +1,49 @@
+/* 风格：深色 dark —— 深底浅字、描边卡片、发光按钮（科技、工具、夜间场景）
+ * 叠加在 prototype-style.css 之后，只改表面，不改布局。 */
+:root {
+  --color-text-primary: #E8ECF8;
+  --color-text-secondary: #A9B3D1;
+  --color-text-tertiary: #8D97B5;
+  --color-text-quaternary: #5C6788;
+  --color-border: #2A3452;
+  --color-border-light: #222B47;
+  --color-bg-base: #141A2E;
+  --color-bg-layout: #0E1322;
+  --color-bg-elevated: #1A2138;
+  --color-bg-mask: rgba(0, 0, 0, 0.6);
+  --color-primary-bg: rgba(var(--color-primary-rgb), 0.18);
+  --color-border-strong: #34406A;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: none;
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+body { background-color: var(--color-bg-layout); color: var(--color-text-primary); }
+.phone-frame { background-color: var(--color-bg-layout); }
+.card { border: 1px solid var(--color-border); box-shadow: none; }
+.input { border: 1px solid var(--color-border); background: var(--color-bg-elevated); color: var(--color-text-primary); }
+.btn--primary { background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary)); box-shadow: 0 0 22px rgba(var(--color-primary-rgb), 0.45); }
+.btn--orange { box-shadow: 0 0 22px rgba(250, 140, 22, 0.4); }
+.btn--secondary { background: var(--color-bg-elevated); border: 1px solid var(--color-border); color: var(--color-text-secondary); }
+.tag--primary { color: var(--color-primary-light); }
+.tag--success { background: rgba(82, 196, 26, 0.16); color: #7BE04F; }
+.tag--orange { background: rgba(250, 140, 22, 0.16); color: #FFB45E; }
+.tag--red { background: rgba(255, 77, 79, 0.16); color: #FF8587; }
+.modal-content { border-top: 1px solid var(--color-border-strong); box-shadow: none; }
+.toast { background: rgba(255, 255, 255, 0.92); color: #141A2E; }
+.tab-bar { border-top: 1px solid var(--color-border-light); }
+.fab { box-shadow: 0 0 22px rgba(255, 77, 79, 0.45); }
+/* PC / 后台 */
+.desktop-frame { background-color: var(--color-bg-layout); }
+.sidebar { --sidebar-bg: #0A0F1D; border-right-color: var(--color-border-light); }
+.topbar { background-color: var(--color-bg-base); }
+.panel, .stat, .dialog { border: 1px solid var(--color-border); box-shadow: none; }
+.dialog { border-color: var(--color-border-strong); box-shadow: var(--shadow-lg); }
+.table th { background-color: #1D2540; }
+.table tr:hover td { background-color: rgba(255, 255, 255, 0.03); }
+.select, .pagination__item { background-color: var(--color-bg-elevated); border-color: var(--color-border); }
+.btn--sm.btn--primary { background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary)); box-shadow: 0 0 18px rgba(var(--color-primary-rgb), 0.4); }
+.stat__delta { color: #7BE04F; }
+.stat__delta.down { color: #FF8587; }

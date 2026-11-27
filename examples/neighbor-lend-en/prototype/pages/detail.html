@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/style.css"><title>Neighbor Lend · Item detail</title>
+<style>.hero{height:180px;background:var(--color-primary-bg);display:flex;align-items:center;justify-content:center;font-size:72px}.row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--color-border-light);font-size:14px}.row>span:first-child{color:var(--color-text-tertiary)}.bot{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:375px;padding:10px 16px;background:var(--color-bg-base);border-top:1px solid var(--color-border-light)}.bd{padding-bottom:80px}.sheet-row{margin-bottom:14px}.sheet-row label{display:block;font-size:13px;color:var(--color-text-secondary);margin-bottom:6px}.seg{display:flex;gap:8px}.seg span{flex:1;text-align:center;padding:10px 0;border:1px solid var(--color-border);border-radius:8px;font-size:14px}.seg .on{border-color:var(--color-primary);color:var(--color-primary);background:var(--color-primary-bg)}</style></head>
+<body><div class="phone-frame bd">
+<div class="nav-bar"><a class="nav-bar__back" href="list.html">‹ Back</a><span class="nav-bar__title">Item detail</span><span style="width:48px"></span></div>
+<div class="hero">🔧</div>
+<div class="card"><div class="card__title">Bosch power drill (with 12 bits)</div>
+ <div class="row"><span>Lender</span><span>Building 3, Ms. Wang (verified)</span></div>
+ <div class="row"><span>Distance</span><span>200 m</span></div>
+ <div class="row"><span>Max loan period</span><span>7 days</span></div>
+ <div class="row"><span>Deposit</span><span>No deposit</span></div>
+ <div class="row"><span>Status</span><span id="st"><span class="tag tag--success">Available</span></span></div>
+ <p style="margin-top:12px;font-size:13px;color:var(--color-text-secondary)">Used twice on weekends to build a bookshelf, in good shape. Please hand it over in person and wipe it clean before returning.</p></div>
+<div class="bot"><div class="btn btn--primary" id="btn-borrow" onclick="openSheet()">Request to borrow</div></div>
+<div class="modal-overlay" id="mask"><div class="modal-content">
+ <div class="card__title">Request to borrow</div>
+ <div class="sheet-row"><label>Loan period</label><div class="seg"><span>1 day</span><span class="on">3 days</span><span>7 days</span></div></div>
+ <div class="sheet-row"><label>Message to Ms. Wang (optional)</label><input class="input" placeholder="e.g. Saturday morning, back Sunday"></div>
+ <div class="btn btn--primary" id="btn-submit" onclick="submitReq()">Send request</div>
+ <div class="btn btn--ghost" onclick="closeSheet()">Cancel</div></div></div>
+<div class="toast" id="toast">Request sent, waiting for Ms. Wang to confirm</div>
+</div>
+<script>
+function openSheet(){document.getElementById('mask').classList.add('active')}
+function closeSheet(){document.getElementById('mask').classList.remove('active')}
+function sent(){var b=document.getElementById('btn-borrow');b.textContent='Waiting for the lender';b.className='btn btn--secondary btn--disabled';document.getElementById('st').innerHTML='<span class="tag tag--orange">Pending</span>';document.getElementById('toast').classList.add('show')}
+function submitReq(){closeSheet();sent()}
+if(new URLSearchParams(location.search).get('s')==='sent')sent();
+</script></body></html>

@@ -1,0 +1,83 @@
+{
+ "scope": "3.2",
+ "title": "3.2 归还与评价：页面流转总览",
+ "nodes": [
+  {
+   "id": "start",
+   "kind": "start",
+   "label": "进入“我的借用”",
+   "col": 0,
+   "row": 0
+  },
+  {
+   "id": "mine",
+   "screen": "mine",
+   "col": 1,
+   "row": 0
+  },
+  {
+   "id": "confirm",
+   "screen": "return-confirm",
+   "col": 2,
+   "row": 0
+  },
+  {
+   "id": "review",
+   "screen": "review",
+   "col": 3,
+   "row": 0
+  },
+  {
+   "id": "done",
+   "screen": "review-done",
+   "col": 3,
+   "row": 1
+  },
+  {
+   "id": "list",
+   "screen": "list",
+   "col": 1,
+   "row": 1
+  }
+ ],
+ "edges": [
+  {
+   "f": "start",
+   "t": "mine",
+   "label": "点底部 Tab",
+   "kind": "normal"
+  },
+  {
+   "f": "mine",
+   "t": "confirm",
+   "label": "点“我已归还”",
+   "kind": "popup"
+  },
+  {
+   "f": "confirm",
+   "t": "review",
+   "label": "确认已归还",
+   "kind": "success"
+  },
+  {
+   "f": "mine",
+   "t": "review",
+   "label": "已完成订单点“去评价”",
+   "kind": "normal"
+  },
+  {
+   "f": "review",
+   "t": "done",
+   "label": "提交评价",
+   "kind": "success",
+   "fs": "b",
+   "ts": "t"
+  },
+  {
+   "f": "done",
+   "t": "list",
+   "label": "回到发现",
+   "kind": "back"
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+❌ [L-202] 缺少 Mermaid 时序图（sequenceDiagram）
+❌ [L-203] 缺少 Mermaid 业务流程图（flowchart）
+
+PRD：<PROJ>/neighbor-lend-prd.md
+机器校验得分：90/100 —— 2 个错误，0 个提醒（语义类质检需 AI 另行判断，见 references/qa-semantic.md）
